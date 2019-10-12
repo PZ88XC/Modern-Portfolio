@@ -1,0 +1,78 @@
+@import "config";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background();
+  background-color: $primary-color;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  height: 100%;
+  line-height: 1.5;
+}
+
+//Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  //Classes inside the headings
+  &.large-heading {
+    font-size: 4rem;
+  }
+
+  &.small-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background-color: rgba(lighten($primary-color, 2), 0.5);
+  }
+  //Classes inside the headings
+}
+
+//Icons
+/*a {
+}*/
+
+//Main Header Codes
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+//Secondary Text Color for the Name
+.text-secondary {
+  color: $seconday-color;
+}
+
+//Styling items in Main
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: $seconday-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
