@@ -1,4 +1,6 @@
 @import "config";
+@import "menu";
+
 * {
   box-sizing: border-box;
 }
@@ -46,7 +48,7 @@ header {
 
 //Secondary Text Color for the Name
 .text-secondary {
-  color: $seconday-color;
+  color: $secondary-color;
 }
 
 //Styling items in Main
@@ -63,7 +65,7 @@ main {
       text-decoration: none;
 
       &:hover {
-        color: $seconday-color;
+        color: $secondary-color;
         @include easeOut();
       }
     }
