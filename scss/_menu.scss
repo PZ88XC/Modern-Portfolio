@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #ffff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -114,7 +114,7 @@
     text-transform: uppercase;
     padding: 1rem;
     font-weight: 300;
-    color: #ffff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
@@ -128,5 +128,29 @@
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1;
+  }
+}
+
+@mixin mediaSM {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLG {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
